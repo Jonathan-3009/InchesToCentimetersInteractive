@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    const double CENTIMETERS_PER_INCH = 2.54;
+
+    static void Main()
+    {
+        Console.Write("Enter the measurement in inches: ");
+
+        string input = Console.ReadLine();
+
+        double inches;
+        if (double.TryParse(input, out inches))
+        {
+            double centimeters = inches * CENTIMETERS_PER_INCH;
+
+            Console.WriteLine($"{inches} inches is {centimeters} centimeters.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a numeric value.");
+        }
+    }
+}
